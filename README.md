@@ -16,15 +16,17 @@ Extending the code of Step 1, generate a VRP instance with the following charact
 3. The depot is located at (x, y) = 50
 4. For generating the coordinates and demands of the 30 customers we use the following code which constructs the thirty customer nodes and stores them in an arraylist called customers:
 
-`
-Random ran = new Random (myBirthNumber); <br>
-for (int i = 1 ; i <= 30; i++) {<br>
-Node cust = new Node();<br>
-cust.x = ran.nextInt(100);<br>
-cust.y = ran.nextInt(100); cust.demand = 4 + ran.nextInt(7); cust.ID = i;<br>
-customers.add(cust);<br>
-}<br>
-`
+```
+Random ran = new Random (myBirthNumber);
+for (int i = 1 ; i <= 30; i++)
+Node cust = new Node();
+cust.x = ran.nextInt(100);
+cust.y = ran.nextInt(100); 
+cust.demand = 4 + ran.nextInt(7); 
+cust.ID = i;
+customers.add(cust);
+}
+```
 
 The value myBirthNum is obtained by translating the user's birthday into an integer value, using the following scheme:
 Birthday: ab/cd/ef (dd/mm/yy) -> myBirthNum = abcdef;
